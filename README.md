@@ -9,8 +9,6 @@ This is function
 library(ggplot2)
 ```
 
-    ## Warning: package 'ggplot2' was built under R version 3.5.3
-
 ``` r
 normal_prob_area_plot <- function(mean, sd, above= NULL, below = NULL, between = c(NULL, NULL), outside = c(NULL, NULL)){
   
@@ -89,6 +87,11 @@ normal_prob_area_plot <- function(mean, sd, above= NULL, below = NULL, between =
           plot.subtitle = element_text(hjust = 0.5,color = "#08306b", size = 15, face = "italic"))
   
 }
+
+normal_prob_area_plot(70, 8, above = 75)
+normal_prob_area_plot(70, 3, below = 65.2)
+normal_prob_area_plot(70, 3, between = c(68, 77))
+normal_prob_area_plot(70, 3, outside = c(68, 77))
 ```
 
 Example
@@ -98,13 +101,16 @@ Example
 
 ![plot](right%20tail.jpeg)
 
+
 ![](README_files/figure-markdown_github/unnamed-chunk-3-1.png)
 
 ![plot](left%20tail.jpeg)
 
+
 ![](README_files/figure-markdown_github/unnamed-chunk-4-1.png)
 
 ![plot](between.jpeg)
+
 
 ![](README_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
